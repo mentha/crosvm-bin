@@ -2,8 +2,7 @@ FROM fedora AS builder
 
 WORKDIR /root
 
-RUN --mount=type=cache,dst=/var/cache/dnf/ \
-	sed -e '$ainstall_weak_deps=False' -e '$akeepcache=True' -i /etc/dnf/dnf.conf && \
+RUN sed -e '$ainstall_weak_deps=False' -i /etc/dnf/dnf.conf && \
 	dnf install -y \
 		cargo \
 		clang-devel \
@@ -51,8 +50,7 @@ RUN cd crosvm && \
 
 FROM fedora
 
-RUN --mount=type=cache,dst=/var/cache/dnf/ \
-	sed -e '$ainstall_weak_deps=False' -e '$akeepcache=True' -i /etc/dnf/dnf.conf && \
+RUN sed -e '$ainstall_weak_deps=False' -i /etc/dnf/dnf.conf && \
 	dnf install -y \
 		dbus-libs \
 		libcap \
