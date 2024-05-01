@@ -1,0 +1,12 @@
+[submodule "crosvm"]
+	path = crosvm
+	url = https://chromium.googlesource.com/crosvm/crosvm
+[submodule "platform2"]
+	path = platform2
+	url = https://chromium.googlesource.com/chromiumos/platform2
+[submodule "gfxstream"]
+	path = gfxstream
+	url = https://android.googlesource.com/platform/hardware/google/gfxstream
+[submodule "aemu"]
+	path = aemu
+	url = https://android.googlesource.com/platform/hardware/google/aemu
