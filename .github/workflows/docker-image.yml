@@ -12,7 +12,7 @@ jobs:
 
     - uses: actions/checkout@v4
       with:
-        submodules: true
+        submodules: recursive
 
     - uses: macbre/push-to-ghcr@v13
       with:
